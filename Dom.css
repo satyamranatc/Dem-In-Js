@@ -1,0 +1,35 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #262626;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+.Style1
+{
+    background-color: teal;
+    color: white;
+}
+
+.Style2
+{
+    border-radius: 40px;
+    border: 2px solid white;
+}
+
+.Style3
+{
+   padding: 20px;
+   border: 2px solid red;
+   border-radius: 20px;
+}
