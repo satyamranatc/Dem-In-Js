@@ -1,0 +1,63 @@
+// ! --------Events--------
+//* What is a Event?
+//? Event is any type Of action on page or element
+//?  like:- Click, scroll, mousemove. etc...
+
+// ! We can Apply Events By:
+//? 1. By Attribute in Html
+//? 2. By Properties in JS
+//? 3. By EventListeners in JS
+
+
+// ? By Attribute:
+function fun()
+{
+    alert("Hi")
+}
+
+
+
+//? By Property:
+let Btn = document.getElementById("Btn");
+Btn.onclick = fun;
+
+
+//? By Event Listeners:
+let Btn2 = document.getElementById("Btn2");
+
+//? e is the Event Object
+// Btn2.addEventListener("click",(e)=>{
+//    alert("Hiii")
+// });
+
+Btn2.addEventListener("dblclick",(e)=>{
+    alert("Done")
+});
+
+
+
+
+// !--------------List Of Events-----------------
+
+// See The List:
+//  https://docs.google.com/document/d/1b2z6JPaFJc4EfSk9DoEVVHkhw_enun3KZBxzfJ3U0ak/edit?usp=sharing
+
+
+
+
+// ! ---------------------------------
+
+let Box = document.getElementById("Box");
+
+Box.addEventListener("keydown",(e)=>{
+    console.log(e.key)
+});
+
+
+Box.addEventListener("copy",(e)=>{
+    alert("Chala ja")
+});
+
+Box.addEventListener("cut",(e)=>{
+    alert("Na Mane")
+});
