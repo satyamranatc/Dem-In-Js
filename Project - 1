@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Site</title>
+    <link rel="stylesheet" href="./Demo.css">
+</head>
+<body>
+    
+
+    <div id="MyDiv">
+        <form>
+            <label>Enter Your Name</label>
+            <input type="text" >
+            <p>What Do You Want To Order</p>
+
+            <select>
+                <option>Chai</option>
+                <option>Pav Bhaji</option>
+                <option>Chole Bhature</option>
+                <option>Mava Kulfi</option>
+                <option>Pani Puri</option>
+                <option>Mommos</option>
+            </select>
+            <h3 id = "Price"></h3>
+            <button>Order</button>
+            <button>Bill Banao</button>
+        </form>
+    </div>
+
+
+
+
+</body>
+<script src="./Deom.js"></script>
+</html>
+
+
+------------------Java Script-----------------------------------
+
+let Price = document.querySelector("#Price")
+let DropDown = document.querySelector("select");
+
+
+DropDown.addEventListener("change", (e)=>{
+    let selectedData = e.target.value
+    console.log(selectedData);
+    if(selectedData == "Chai")
+    {
+        Price.innerHTML = `<b>Price: </b>${20}`;
+    }
+    else if(selectedData == "Pav Bhaji")
+    {
+        Price.innerHTML = "65";
+    }
+    else if(selectedData == "Chole Bhature")
+    {
+        Price.innerHTML = "85";
+    }
+    else if(selectedData == "Mava Kulfi")
+    {
+        Price.innerHTML = "20";
+    }
+    else if(selectedData == "Pani Puri")
+    {
+        Price.innerHTML = "10";
+    }
+    else if(selectedData == "Mommos")
+    {
+        Price.innerHTML = "40";
+    }
+    else
+    {
+        Price.innerHTML = "Pata Nahi";
+    }
+
+})
+
+
+__________________CSS______________________
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+#MyDiv
+{
+    height: 500px;
+    width: 350px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    box-shadow: 0px 10px 30px white;
+}
+
+#MyDiv form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+
+#MyDiv input
+{
+    padding: .4rem 2rem;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 20px;
+    width: 80%;
+}
+
+#MyDiv button
+{
+    padding: 1rem 2rem;
+    background-color: rgb(255, 0, 111);
+    color: white;
+    font-family: sans-serif;
+    border-radius: 11px;
+    border: none;
+}
