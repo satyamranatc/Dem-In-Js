@@ -1,0 +1,179 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+#MyDiv
+{
+    height: 500px;
+    width: 350px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    box-shadow: 0px 10px 30px white;
+}
+
+#MyDiv form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+
+#MyDiv input
+{
+    padding: .4rem 2rem;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 20px;
+    width: 80%;
+}
+
+#MyDiv button
+{
+    padding: .6rem 1.5rem;
+    background-color: rgb(255, 0, 111);
+    color: white;
+    font-family: sans-serif;
+    border-radius: 11px;
+    border: none;
+}
+
+.Btns
+{
+
+
+    width: 100%;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Site</title>
+    <link rel="stylesheet" href="./Demo.css">
+</head>
+<body>
+    
+
+    <div id="MyDiv">
+        <form id = "MyForm">
+            <h3>Enter Your Data</h3>
+            <input id = "Inpt" type="text" >
+
+            
+            <div class="Btns">
+
+                <button type="button" onclick="Sqr()" >SQR</button>
+                <button type="button" onclick="Cube()" >Cube</button>
+                <button type="button" onclick="Sqrt()" >SQRT</button>
+                <button type="button" onclick="Facto()" >Factorial</button>
+
+            </div>
+        </form>
+            
+        <br>
+        <br>
+        <h3 id="Output"></h3>
+    </div>
+
+
+
+
+</body>
+<script src="./Demo.js"></script>
+</html>
+
+
+
+
+let Inpt = document.getElementById('Inpt');
+let Output = document.getElementById("Output");
+
+
+
+
+function Sqr()
+{
+    let x = Inpt.value;
+    let Y = x*x;
+    if(isNaN(Y))
+    {
+        Output.innerText = "Invalid Input";
+    }
+    else
+    {
+        Output.innerText = Y;
+    }
+}
+
+function Cube()
+{
+    let x = Inpt.value;
+    let Y = x*x*x;
+    console.log(Y)
+    if(isNaN(Y))
+    {
+        Output.innerText = "Invalid Input";
+    }
+    else
+    {
+        Output.innerText = Y;
+    }
+}
+
+function Sqrt()
+{
+    let x = Inpt.value;
+    let Y = Math.sqrt(x);
+    if(isNaN(Y))
+    {
+        Output.innerText = "Invalid Input";
+    }
+    else
+    {
+        Output.innerText = Y;
+    }
+}
+
+function Facto()
+{
+    let x = Inpt.value;
+    let Y = 1;
+    for(let i = x; i > 1; i--)
+    {
+        Y = Y * i
+    }
+    if(isNaN(Y))
+    {
+        Output.innerText = "Invalid Input";
+    }
+    else
+    {
+        Output.innerText = Y;
+    }
+ 
+}
